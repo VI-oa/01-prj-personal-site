@@ -1,1 +1,303 @@
-/* Add you CSS here */
+/* These colors are used throughout the page. */
+:root {
+	--cream: #fff8e8;
+	--paper: #fffdf5;
+	--brown: #4a2d25;
+	--red: #cc838f;
+	--purple: #b9b0c0;
+	--yellow: #f2c94c;
+}
+
+/* This keeps sizes predictable and removes the browser's default spacing. */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	color: var(--brown);
+	background-color: var(--cream);
+	font-family: Georgia, "Times New Roman", serif;
+	line-height: 1.6;
+}
+
+a {
+	color: inherit;
+}
+
+.material-symbols-outlined {
+	font-size: 1.1em;
+	vertical-align: middle;
+}
+
+.site-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 24px 8%;
+	background-color: var(--purple);
+	border-bottom: 2px solid var(--brown);
+}
+
+.logo {
+	color: var(--brown);
+	font-size: 1.4rem;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+nav a {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	margin-left: 24px;
+	padding: 8px 14px;
+	border-radius: 20px;
+	background-color: var(--cream);
+	font-weight: bold;
+	text-decoration: none;
+}
+
+nav a .material-symbols-outlined {
+	margin-right: 0;
+}
+
+nav a:hover,
+.site-footer a:hover {
+	color: var(--red);
+}
+
+main,
+.site-footer {
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+.hero {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 48px;
+	min-height: 600px;
+	margin-top: 24px;
+	padding: 80px 8%;
+	background-color: #dfe9cc;
+  border-radius: 50px;
+	overflow: hidden;
+}
+
+.hero-text {
+	position: relative;
+	z-index: 1;
+	max-width: 620px;
+}
+
+.eyebrow,
+.section-label {
+	color: var(--red);
+	font-size: 0.9rem;
+	font-weight: bold;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+h1,
+h2,
+h3 {
+	margin-top: 0;
+	line-height: 1.1;
+}
+
+h1 {
+	margin-bottom: 24px;
+	font-size: 4.5rem;
+}
+
+h1 span {
+	color: var(--red);
+}
+
+.intro {
+	max-width: 500px;
+	margin-bottom: 32px;
+	font-size: 1.25rem;
+}
+
+.button {
+	display: inline-block;
+	padding: 12px 20px;
+	color: var(--paper);
+	background-color: var(--red);
+	font-weight: bold;
+	text-decoration: none;
+  border-radius: 20px;
+}
+
+.button .material-symbols-outlined {
+	margin-right: 4px;
+}
+
+.button:hover {
+	background-color: var(--brown);
+}
+
+.photo-holder {
+	position: relative;
+	width: 290px;
+	transform: rotate(4deg);
+}
+
+.washi-tape {
+	position: absolute;
+	top: -25px;
+	left: 90px;
+	width: 110px;
+	height: 32px;
+	background-color: #f2d78c;
+	opacity: 0.85;
+	transform: rotate(2deg);
+}
+
+.profile-photo {
+	width: 290px;
+	height: 290px;
+	border: 12px solid var(--paper);
+	border-bottom-width: 38px;
+	object-fit: cover;
+	box-shadow: 8px 8px 0 var(--brown);
+}
+
+.hero-graphics {
+	position: absolute;
+	top: 250px;
+	right: 0;
+	z-index: 0;
+	width: 280px;
+	height: auto;
+}
+
+.paper-section,
+.skills-section,
+.site-footer {
+	padding: 80px 8%;
+}
+
+.paper-section {
+	margin: 50px 5%;
+	background-color: var(--paper);
+	box-shadow: 8px 8px 0 var(--yellow);
+	transform: rotate(-1deg);
+}
+
+.paper-section p:not(.section-label) {
+	max-width: 700px;
+	font-size: 1.1rem;
+}
+
+h2 {
+	font-size: 2.7rem;
+}
+
+.purple-label,
+.skill-number {
+	color: var(--purple);
+}
+
+.skills-section {
+	border-top: 2px solid var(--brown);
+}
+
+.skill-list {
+	display: flex;
+	gap: 24px;
+}
+
+.skill-item {
+	flex: 1;
+	padding: 24px;
+	border: 2px solid var(--brown);
+	background-color: var(--paper);
+}
+
+.skill-number {
+	font-weight: bold;
+}
+
+.skill-item h3 {
+	margin: 18px 0 8px;
+	font-size: 1.6rem;
+}
+
+.skill-item p {
+	margin-bottom: 0;
+}
+
+.site-footer {
+	margin-top: 40px;
+	border-top: 2px solid var(--brown);
+	text-align: center;
+}
+
+.site-footer h2 {
+	margin-bottom: 16px;
+}
+
+.site-footer a {
+	color: var(--red);
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+.copyright {
+	margin-top: 50px;
+	font-size: 0.9rem;
+}
+
+/* On smaller screens, stack the hero and skills so they are easy to read. */
+@media (max-width: 700px) {
+	.site-header,
+	.hero,
+	.skill-list {
+		display: block;
+	}
+
+	.site-header nav {
+		margin-top: 16px;
+	}
+
+	nav a {
+		margin: 0 18px 0 0;
+	}
+
+	.hero {
+		padding-top: 60px;
+		text-align: center;
+	}
+
+	h1 {
+		font-size: 3.2rem;
+	}
+
+	.intro {
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.profile-photo {
+		display: block;
+		margin: 0 auto 12px;
+	}
+
+	.photo-holder {
+		margin: 48px auto 12px;
+	}
+
+	.hero-graphics {
+		width: 210px;
+	}
+
+	.skill-item {
+		margin-bottom: 20px;
+	}
+}
